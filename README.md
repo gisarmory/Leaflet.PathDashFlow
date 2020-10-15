@@ -59,6 +59,3 @@ Leaflet 动态流向线。
 
 [Leaflet](https://leafletjs.com/index.html)、[Leaflet.Path.DashFlow](https://gitlab.com/IvanSanchez/Leaflet.Path.DashFlow)
 
-## 免责声明
-
-该插件中集成的纠偏算法，是基于网络上公开已知的，其他语言算法实现的移植版本，作者不对其准确性和合法性做保证。**请在遵守国家保密法的前提下自行斟酌使用**。
