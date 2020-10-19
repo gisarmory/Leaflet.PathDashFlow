@@ -1,11 +1,11 @@
-# Leaflet.PathDashFlow
-Leaflet 动态流向线。
+# 支持“Canvas”的Leaflet.Path.DashFlow动态流向线
+
 
 ## 简介：
 
 使用Leaflet.Path.DashFlow可实现轨迹动态展示、管道流向动态展示、河流流向动态展示等，增强可视化展示效果。
 
-使用此插件的时候，当初始化地图“ preferCanvas”参数为“true”时，及使用“Canvas”方式绘制时，效果不可用，经研究，需要对“leaflet\layer\vector\Canvas.js”中“_updateDashArray”和“_fillStroke”两个方法进行处理，我们将处理后的代码与”L.Path.DashFlow.js“合并封装成Leaflet.PathDashFlow插件，方便大家使用。
+使用此插件的时候，当初始化地图“ preferCanvas”参数为“true”时，及使用“Canvas”方式绘制时，效果不可用，经研究，需要对“L.Canvas”中“updateDashArray”和“fillStroke”两个方法进行处理，我们将处理后的代码与”L.Path.DashFlow.js“合并封装成Leaflet.PathDashFlow插件，方便大家使用。
 
 ## 用法：
 
