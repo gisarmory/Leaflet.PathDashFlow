@@ -1,4 +1,4 @@
-# 支持“Canvas”的Leaflet.Path.DashFlow动态流向线
+# 支持Canvas的Leaflet.Path.DashFlow动态流向线
 
 
 ## 简介：
