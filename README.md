@@ -5,11 +5,11 @@
 
 通过对leaflet以及其插件的学习，我们了解到使用`Leaflet.Path.DashFlow`插件可实现轨迹动态展示、管道流向动态展示、河流流向动态展示等，达到增强可视化展示的效果。
 
-但是在使用的过程中，发现该插件有个弊端，就是当初始化地图`preferCanvas`参数为`true`时，及使用`Canvas`方式绘制时，动态效果不可用。
+但是在使用的过程中，发现该插件有个弊端，就是当使用`Canvas`方式绘制地图（初始化地图`preferCanvas`参数为`true`）时，动态效果不可用。
 
 通过对`Leaflet.Path.DashFlow`以及`leaflet`源码的研究，发现动态线的效果主要通过动态刷新`dashOffset`参数的值，以改变线的样式来实现。`L.SVG`在`_updateStyle`的时候，更新了`dashOffset`参数，但是`L.Canvas`在`_updateStyle`时，并没有更新`dashOffset`属性。
 
-由此，我们找到了解决思路，及在`L.Canvas`的`_updateStyle`方法中，参考`L.SVG`的处理方式，添加对`dashOffset`参数的控制。
+由此，我们找到了解决思路，即在`L.Canvas`的`_updateStyle`方法中，参考`L.SVG`的处理方式，添加对`dashOffset`参数的控制。
 
 为方便使用，我们将`L.Path.DashFlow`插件重新封装，大家引用这个插件，即可在`Canvas`和`SVG`两种方式下使用此插件。
 
